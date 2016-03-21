@@ -1,0 +1,15 @@
+
+<a id="page-photo" class="looking">
+  <%= image_tag "/ww_giant_image.jpg", class= "looking" %>
+
+<div>
+  <div class='target'>
+    <div class = 'dropdown'>
+      <div class= 'characters'>
+        <% @characters.each do |character| %>
+        <%= button_to character.name, tags_path, {method: post, remote: true} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
